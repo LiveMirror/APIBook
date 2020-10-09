@@ -208,6 +208,15 @@ public:
     }
 
 //  generated copy constructor, destructor are fine
+#if !defined( BOOST_NO_CXX11_RVALUE_REFERENCES )
+
+// ... except in C++0x, move disables the implicit copy
+
+    shared_ptr( shared_ptr const & r ) : px( r.px ), pn( r.pn )
+    {
+    }
+
+#endif
 
     template<class Y>
     explicit shared_ptr(weak_ptr<Y> const & r): pn(r.pn) // may throw
