@@ -65,3 +65,8 @@ add_custom_target(run
   COMMAND "${RUBY_BIN}" "${INSTALL_DIR}/main.rb"
   WORKING_DIRECTORY ${INSTALL_DIR}
 )
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(install PROPERTIES FOLDER "${VS_PARENT_FOLDER}")
+set_target_properties(run PROPERTIES FOLDER "${VS_PARENT_FOLDER}")
+

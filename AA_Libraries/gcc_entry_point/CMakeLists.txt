@@ -12,3 +12,6 @@ add_library(library SHARED library.cpp)
 
 add_executable(gcc_entry_point main.cpp)
 target_link_libraries(gcc_entry_point library)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(gcc_entry_point PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

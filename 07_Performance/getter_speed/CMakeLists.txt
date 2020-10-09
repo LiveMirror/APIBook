@@ -17,3 +17,5 @@ add_executable(getter_speed main.cpp vector.cpp)
 # Link against the AutoTimer library
 target_link_libraries(getter_speed autotimer)
 
+# Set parent folder for organization in Visual Studio project
+set_target_properties(getter_speed PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

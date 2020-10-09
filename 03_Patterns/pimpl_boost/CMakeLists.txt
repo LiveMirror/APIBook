@@ -9,3 +9,6 @@ cmake_minimum_required(VERSION 2.4)
 
 # create the libraries
 add_executable(pimpl_boost main.cpp autotimer.cpp)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(pimpl_boost PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

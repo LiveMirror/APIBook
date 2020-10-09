@@ -16,3 +16,6 @@ add_executable(virtual_speed main.cpp myclass.cpp)
 
 # Link against the AutoTimer library
 target_link_libraries(virtual_speed autotimer)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(virtual_speed PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

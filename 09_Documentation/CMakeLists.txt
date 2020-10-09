@@ -7,5 +7,8 @@
 # Declare the minimum version of cmake that we need
 cmake_minimum_required(VERSION 2.4)
 
+# Shared variables for all child CMakeLists.txt
+set(VS_PARENT_FOLDER "09_Documentation")
+
 # Don't build by default - requires user to install doxygen
 #add_subdirectory(doxygen)

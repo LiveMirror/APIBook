@@ -38,3 +38,6 @@ if ("${CMAKE_SYSTEM_NAME}" MATCHES "Darwin")
   #set_target_properties(phonebook PROPERTIES OUTPUT_NAME phonebook)
   set_target_properties(phonebook PROPERTIES SUFFIX .so)
 endif ()
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(phonebook PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

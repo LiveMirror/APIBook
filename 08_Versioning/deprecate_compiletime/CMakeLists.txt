@@ -9,3 +9,6 @@ cmake_minimum_required(VERSION 2.4)
 
 # create the libraries
 add_executable(deprecate_compiletime main.cpp myclass.cpp)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(deprecate_compiletime PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

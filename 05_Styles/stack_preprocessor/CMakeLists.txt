@@ -10,3 +10,5 @@ cmake_minimum_required(VERSION 2.4)
 # Build the executable
 add_executable(stack_preprocessor main.cpp stack.cpp)
 
+# Set parent folder for organization in Visual Studio project
+set_target_properties(stack_preprocessor PROPERTIES FOLDER "${VS_PARENT_FOLDER}")
