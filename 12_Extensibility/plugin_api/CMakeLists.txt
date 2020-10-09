@@ -30,7 +30,7 @@ add_executable(plugin_api main.cpp)
 target_link_libraries(plugin_api coreapi)
 
 if (WIN32)
-   find_library(DL_LIB Kernel32.dll)
+   find_library(DL_LIB Kernel32)
 else ()
    find_library(DL_LIB dl)
 endif ()
