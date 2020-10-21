@@ -16,3 +16,6 @@ add_executable(iterators main.cpp value.cpp)
 
 # Link against the AutoTimer library
 target_link_libraries(iterators autotimer)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(iterators PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

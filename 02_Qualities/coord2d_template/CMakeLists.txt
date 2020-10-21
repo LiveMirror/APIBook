@@ -10,3 +10,5 @@ cmake_minimum_required(VERSION 2.4)
 # Build the executable
 add_executable(coord2d_template main.cpp)
 
+# Set parent folder for organization in Visual Studio project
+set_target_properties(coord2d_template PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

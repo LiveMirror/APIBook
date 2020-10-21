@@ -9,3 +9,6 @@ cmake_minimum_required(VERSION 2.4)
 
 # create the libraries
 add_executable(version_api main.cpp version.cpp)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(version_api PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

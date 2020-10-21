@@ -9,3 +9,6 @@ cmake_minimum_required(VERSION 2.4)
 
 # Build the executable
 add_executable(callback_instance main.cpp modulea.cpp moduleb.cpp)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(callback_instance PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

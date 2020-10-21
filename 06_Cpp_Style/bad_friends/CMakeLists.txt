@@ -9,3 +9,6 @@ cmake_minimum_required(VERSION 2.4)
 
 # Build the executable
 add_executable(bad_friends main.cpp node.cpp graph.cpp)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(bad_friends PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

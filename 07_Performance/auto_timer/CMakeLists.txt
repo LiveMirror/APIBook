@@ -9,3 +9,6 @@ cmake_minimum_required(VERSION 2.4)
 
 # create the library
 add_library(autotimer STATIC autotimer.cpp)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(autotimer PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

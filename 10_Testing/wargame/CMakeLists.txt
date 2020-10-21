@@ -17,3 +17,7 @@ add_executable(test_stub test_stub.cpp wargame.cpp)
 
 add_executable(test_mock test_mock.cpp wargame.cpp)
 target_link_libraries(test_mock gmock gtest)
+
+# Set parent folder for organization in Visual Studio project
+set_target_properties(test_stub PROPERTIES FOLDER "${VS_PARENT_FOLDER}")
+set_target_properties(test_mock PROPERTIES FOLDER "${VS_PARENT_FOLDER}")

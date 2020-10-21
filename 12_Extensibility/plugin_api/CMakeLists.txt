@@ -21,16 +21,19 @@ set_target_properties(coreapi PROPERTIES DEFINE_SYMBOL BUILDING_CORE)
 
 add_library(plugin1 SHARED plugin1.cpp)
 target_link_libraries(plugin1 coreapi)
+set_target_properties(plugin1 PROPERTIES FOLDER "${VS_PARENT_FOLDER}")
 
 add_library(plugin2 SHARED plugin2.cpp)
 target_link_libraries(plugin2 coreapi)
+set_target_properties(plugin2 PROPERTIES FOLDER "${VS_PARENT_FOLDER}")
 
 # create the libraries
 add_executable(plugin_api main.cpp)
 target_link_libraries(plugin_api coreapi)
+set_target_properties(plugin_api PROPERTIES FOLDER "${VS_PARENT_FOLDER}")
 
 if (WIN32)
-   find_library(DL_LIB Kernel32.dll)
+   find_library(DL_LIB Kernel32)
 else ()
    find_library(DL_LIB dl)
 endif ()
